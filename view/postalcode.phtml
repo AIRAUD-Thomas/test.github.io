@@ -1,0 +1,29 @@
+<h1>Recherche par code postal</h1>
+
+<!-- ERREURS FORMULAIRE -->
+<?php if (!empty($errorsForm)) : ?>
+    <?php foreach ($errorsForm as $error) : ?>
+        <p style="color:red;font-style:italic;"><?= $error ?></p>
+    <?php endforeach; ?>
+<?php endif; ?>
+<!-- FIN ERREURS FORMULAIRE -->
+
+<div class="container">
+    <form method="POST" action="">
+        <div class="mb-3">
+            <label for="postalcode" class="form-label">Entrer votre code postal </label>
+            <input type="number" class="form-control" id="postalcode" name="postalcode">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Rechercher</button>
+    </form>
+
+    <!-- MSG VALID -->
+    <?php if (!empty($msgValid)) : ?>
+        <?php foreach ($msgValid as $msg) : ?>
+            <p style="color:green;font-style:italic;"><?= $msg ?></p>
+        <?php endforeach; ?>
+    <?php endif; ?>
+    <!-- FIN MSG VALID -->
+
+</div>
